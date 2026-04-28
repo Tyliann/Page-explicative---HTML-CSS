@@ -1,0 +1,301 @@
+
+/* ----------------------------------------------------------------------------
+  SECTION 1: VARIABLES CSS 
+  ----------------------------------------------------------------------------
+  Les variables CSS permettent de définir des valeurs réutilisables dans tout 
+  le document. Cela facilite la maintenance et les modifications futures.
+  On utilise le préfixe "--" pour déclarer une variable personnalisée.
+*/
+:root {
+    /* Couleurs principales du thème */
+    --primary-color: #4A90D9;      /* Bleu principal */
+    --secondary-color: #2ECC71;    /* Vert émeraude */
+    --accent-color: #E74C3C;       /* Rouge corail */
+    --background-color: #F5F7FA;   /* Gris clair */
+    --card-background: #FFFFFF;    /* Blanc */
+    --text-primary: #2C3E50;       /* Bleu nuit */
+    --text-secondary: #7F8C8D;     /* Gris moyen */
+    --border-color: #E0E6ED;       /* Gris clair */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Ombre semi-transparente */
+    
+    /* Typographie */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    
+    /* Espacements */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xlarge: 32px;
+    
+    /* Rayon des bordures */
+    --border-radius: 12px;
+    --border-radius-small: 8px;
+
+    /* Notes -- les variables sont juste des nom que j'ai définis ex: (--primary-color: #4A90D9;) peut s'appellé (--couleur principale: #4A90D9;) */
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 2: STYLE GLOBAL DU DOCUMENT
+  ----------------------------------------------------------------------------
+  Ces styles s'appliquent à tout le document et définissent l'apparence générale
+*/
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-primary);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: var(--spacing-large);
+    transition: background-color 0.3s ease;
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 3: TITRES ET EN-TÊTES
+  ----------------------------------------------------------------------------
+  Styles pour les éléments de titre (h1, h2, etc.)
+*/
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-large);
+    text-align: center;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-medium);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-small);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 4: STYLE DES PARAGRAPHES ET TEXTE
+  ----------------------------------------------------------------------------
+*/
+p {
+    margin-bottom: var(--spacing-medium);
+    color: var(--text-secondary);
+    text-align: justify;
+}
+
+strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+mark {
+    background-color: #FFE066;
+    color: var(--text-primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+i {
+    font-style: italic;
+    color: var(--text-primary);
+    opacity: 0.8;
+}
+
+s {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 5: LIENS HYPERTEXTE
+  ----------------------------------------------------------------------------
+  Styles pour les éléments <a> (liens)
+*/
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.link {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius-small);
+    display: inline-block;
+    margin-bottom: var(--spacing-small);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 6: CITATIONS
+  ----------------------------------------------------------------------------
+  Styles pour les éléments de citation (<q> et <blockquote>)
+*/
+q {
+    font-style: italic;
+    color: var(--primary-color);
+    quotes: "«" "»";
+}
+
+blockquote {
+    background-color: #F8F9FA;
+    border-left: 4px solid var(--primary-color);
+    margin: var(--spacing-medium) 0;
+    padding: var(--spacing-medium);
+    border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 7: LISTES
+  ----------------------------------------------------------------------------
+  Styles pour les éléments de liste (<ul>, <ol>, <li>)
+*/
+ul, ol {
+    margin-bottom: var(--spacing-medium);
+    padding-left: var(--spacing-large);
+}
+
+li {
+    margin-bottom: var(--spacing-small);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+li:hover {
+    color: var(--text-primary);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 8: CARTES ET CONTENEURS
+  ----------------------------------------------------------------------------
+  Styles pour les éléments de mise en page (div, container)
+*/
+.container {
+    background-color: var(--card-background);
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    margin-bottom: var(--spacing-large);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 8px 15px var(--shadow-color);
+    transform: translateY(-4px);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 9: IMAGES
+  ----------------------------------------------------------------------------
+  Styles pour les éléments <img>
+*/
+img {
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--border-radius-small);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin: var(--spacing-medium) 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 10: ÉLÉMENTS SPÉCIAUX
+  ----------------------------------------------------------------------------
+  Styles pour divers éléments HTML spécifiques
+*/
+figure {
+    text-align: center;
+    margin: var(--spacing-large) 0;
+}
+
+figcaption {
+    font-style: italic;
+    color: var(--text-secondary);
+    padding: var(--spacing-small);
+    font-size: 0.9rem;
+}
+
+time {
+    color: var(--primary-color);
+    font-weight: 600;
+    background-color: rgba(74, 144, 217, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+abbr {
+    border-bottom: 1px dotted var(--text-secondary);
+    cursor: help;
+    color: var(--primary-color);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 11: INDICES ET EXPOSANTS
+  ----------------------------------------------------------------------------
+  Styles pour les éléments <sub> et <sup>
+*/
+sub {
+    vertical-align: sub;
+    font-size: 0.75em;
+    color: var(--accent-color);
+}
+
+sup {
+    vertical-align: super;
+    font-size: 0.75em;
+    color: var(--primary-color);
+}
+
+/* ----------------------------------------------------------------------------
+  SECTION 12: RESPONSIVE DESIGN
+  ----------------------------------------------------------------------------
+  Styles pour adapter le site aux différentes tailles d'écran
+*/
+@media (max-width: 768px) {
+    body {
+        padding: var(--spacing-medium);
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        padding: var(--spacing-medium);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: var(--spacing-small);
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+}
