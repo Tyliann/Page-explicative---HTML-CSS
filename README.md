@@ -1,9 +1,7 @@
-# Page-explicative---HTML-CSS
-
-
-Comment observer le code de façon plus simple ?
+# Comment observer le code de façon plus simple ?
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
   1:Installez https://code.visualstudio.com/
