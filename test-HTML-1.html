@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <title>Page explcative -  HTML/CSS</title>
+    <!-- Lien vers la page de style CSS externe -->
+    <link rel="stylesheet" href="test-CSS-1.css">
+</head>
+<body>
+    <!-- =========================================================================
+        EN-TÊTE PRINCIPAL
+        Cette section contient le titre principal de la page avec la balise <h1>
+        La balise <h1> représente le titre de niveau le plus important
+    ========================================================================= -->
+    <header>
+        <h1>test code avec un titre de balise "h1" d'ordre 1 à 6</h1>
+    </header>
+
+    <!-- =========================================================================
+        CONTENU PRINCIPAL
+        Cette section contient un exemple de document HTML avec différents éléments
+    ========================================================================= -->
+    <main>
+        <!-- Premier conteneur avec du texte et des liens -->
+        <div class="container">
+            <p>Ceci est un exemple de document HTML simple avec la balise "p". Elle effectue un paragraphe.</p>
+            
+            <!-- Sous-section pour les liens hypertexte -->
+            <div>
+                <!-- Lien simple vers une page externe -->
+                <a href="https://github.com/Tyliann" class="link">
+                    Cliquez ici pour un lien github page de tyliann grâce à la balise "a href"###", 
+                    grâce à ça, ça à créé un lien hypertexte
+                </a>
+                
+                <!-- Lien qui s'ouvre dans un nouvel onglet grâce à target="_blank" -->
+                <p><a href="https://github.com/Tyliann" class="link" target="_blank">Pareil mais avec "target blank"</a></p>
+            </div>
+        </div>
+
+        <!-- =========================================================================
+            SECTION: FORMATTAGE DU TEXTE
+            Cette section démontre les différentes balises de formatage de texte
+        ========================================================================= -->
+        <div class="container">
+            <!-- <strong> rend le texte en gras pour强调 l'importance -->
+            <p><strong>Ceci est un texte avec la balise "strong".</strong>
+            <!-- <mark> surligne le texte pour le mettre en évidence -->
+            <mark>Ensuite avec la balise "mark" qui surligne/met en évidence</mark></p>
+            
+            <!-- <q> crée une citation courte avec des guillemets automatiques -->
+            <q>Ceci est une citation avec la balise "q" qui est mis automatiquement entre guillemets.</q>
+            
+            <!-- <blockquote> crée un bloc de citation distinct du reste du texte -->
+            <blockquote>Ceci est une citation plus longue avec la balise "quote" qui est mis dans un bloc de citation. Elle permet donc distincte du texte</blockquote>
+            
+            <!-- <sub> crée un indice (texte en bas) -->
+            <p>Avec balise p.<sub>Et un texte en indice avec la balise "sub".</sub></p>
+            
+            <!-- <sup> crée un exposant (texte en haut) -->
+            <p>Avec balise p.<sup>Et un texte en exposant avec la balise "sup".</sup></p>
+
+            <!-- <s> barre le texte -->
+            <s>Voici un texte barré avec la balise "s".</s>
+            
+            <!-- <i> met le texte en italique -->
+            <p><i>Voici un texte en italique avec la balise "i".</i></p>
+            
+            <!-- <abbr> définit une abréviation, l'attribut title affiche le texte complet au survol -->
+            <p><abbr title="Abréviation">Voici un texte avec la balise "abbr" qui est un attribut title et signale une abrévation.</abbr></p>
+            
+            <!-- <br> effectue un saut de ligne -->
+            <p>la balise "br" <br> effectue un saut de ligne.</p>
+        </div>
+
+        <!-- =========================================================================
+            SECTION: LISTES
+            Cette section démontre les différentes balises de listes
+        ========================================================================= -->
+        <div class="container">
+            <!-- <li> définit un élément de liste -->
+            <p>Voici une liste avec la balise "li" :</p>
+            <li>Voici un élément de liste.</li>
+            <li>Voici un autre élément de liste.</li>
+
+            <!-- <ul> crée une liste non ordonnée (avec des puces) -->
+            <p>Ensuite avec la balise "ul"</p>
+            <ul>
+                <li>Premier élément de la liste non ordonnée.</li>
+                <li>Deuxième élément de la liste non ordonnée.</li>
+                <li>Troisième élément de la liste non ordonnée.</li>
+            </ul>
+
+            <!-- <ol> crée une liste ordonnée (avec des numéros) -->
+            <p>Et enfin avec la balise "ol" suivit d'un "li"</p>
+            <ol>
+                <li>Premier élément de la liste ordonnée.</li>
+                <li>Deuxième élément de la liste ordonnée.</li>
+                <li>Troisième élément de la liste ordonnée.</li>
+            </ol>
+        </div>
+
+        <!-- =========================================================================
+            SECTION: CONTENEURS ET IMAGES
+            Cette section démontre les balises de mise en page et les images
+        ========================================================================= -->
+        <div class="container">
+            <!-- <div> crée un conteneur/division dans le document HTML -->
+            <p>Avec la balise "div" on peut créer une division/section dans un document HTML.</p>
+            <p>Pour ce faire il faut créé un liens direct avec le document CSS. EX:</p>
+            
+            <!-- <img> insère une image, src indique le chemin, alt affiche un texte alternatif -->
+            <img src="Photo/Capture-link-CSS.png" alt="Capture d'écran du lien CSS">
+            
+            <!-- Container avec classe pour le style CSS -->
+            <div class="container">
+                <h2>Voici une sous-section avec la balise "h2"</h2>
+                <p>Avec la "class="container" ajouté au "div" pour faire une box grâce au css relié avec une balise "link rel="stylesheet" href="nom du document".</p>
+                
+                <!-- <figure> groupe du contenu média avec une légende -->
+                <!-- <figcaption> définit la légende d'une figure -->
+                <figcaption>Là "figcaption"<figure> et là "figure"</figure></figcaption>
+            </div>
+        </div>
+
+        <!-- =========================================================================
+            SECTION: ÉLÉMENTS MULTIMÉDIAS
+            Cette section montre les images et la balise time
+        ========================================================================= -->
+        <div class="container">
+            <p>Avec la balise "img src="###" on peut mettre une image.et un "alt="###" si l'image ne charge pas.</p>
+            
+            <!-- Image avec attribut alt (texte alternatif si l'image ne charge pas) -->
+            <p><img src="" alt="image de test avec alt"></p>
+            
+            <!-- <time> définit une date/heure, l'attribut datetime donne le format machine -->
+            <p><time datetime="2024-06-15">15 juin 2024:</time> Ceci est un exemple de la balise "time" qui permet de définir une date ou une heure.</p>
+            
+            <!-- Image encodée en base64 (directement dans le HTML) -->
+            <img src="https://www.echosciences-grenoble.fr/uploads/article/image/attachment/1005418938/xl_lens-1209823_1920.jpg" alt="Image de test">
+        </div>
+
+        <div class="container">
+            <p>Pour comprendre les style de la page "CSS" veuillez consulter le document mis sur github <a href="https://github.com/Tyliann/Page-explicative---HTML-CSS/blob/main/test-CSS-1.css">"test-CSS-1.css"</a></p>
+
+        </div>
+    </main>
+
+    <!-- =========================================================================
+        PIED DE PAGE
+        Informations supplémentaires en bas de page
+    ========================================================================= -->
+    <footer>
+        <p style="text-align: center; color: var(--text-secondary); margin-top: 20px;">
+            Page de démonstration HTML/CSS avec commentaires détaillés
+        </p>
+    </footer>
+</body>
+</html>
