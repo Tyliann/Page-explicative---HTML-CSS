@@ -7,6 +7,6 @@
   
   2:Dans vos document créez un dossier
   
-  3: Ouvrez Visual Studio Code puis copier les fichier .html, .css, .png
+  3: Ouvrez Visual Studio Code puis collez les fichier .html, .css, .png
   
   4: Ouvrez les fichier dans Visual Studio Code
